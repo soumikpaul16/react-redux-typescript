@@ -21,11 +21,7 @@ const ProductCard: React.FC<{ productDetails: IProductDetails }> = ({
     <Card className="product-details-card">
       <div key={item_id}>
         <div className="product-card-header">
-          <img
-            src={item_image}
-            alt="interview"
-            className="product-image"
-          />
+          <img src={item_image} alt="interview" className="product-image" />
           <div className="product-description">
             {" "}
             <div className="product-name">{item_name}</div>
@@ -33,18 +29,20 @@ const ProductCard: React.FC<{ productDetails: IProductDetails }> = ({
             <div className="float-right product-cost">&#8377; {item_price}</div>
           </div>
         </div>
-        <img
-          src={scooterExpress}
-          className="product-scooter-icon m-1"
-          alt="interview"
-        />
-        <div
-          className="product-availability "
-          dangerouslySetInnerHTML={{
-            __html: `${productInventory.next_available_by}`,
-          }}
-        ></div>
-        <Button className="float-right product-card-btn">ADD</Button>
+        <div className="product-card-footer mt-1">
+          <img
+            src={scooterExpress}
+            className="product-scooter-icon m-1"
+            alt="interview"
+          />
+          <div
+            className="product-availability "
+            dangerouslySetInnerHTML={{
+              __html: `${productInventory.next_available_by}`,
+            }}
+          ></div>
+          <Button className="float-right product-card-btn">ADD</Button>
+        </div>
       </div>
     </Card>
   );
