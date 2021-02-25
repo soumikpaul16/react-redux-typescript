@@ -20,3 +20,6 @@ The example application is a Search Page that searches the products based on foo
 - Purposefully used both ways of states and dispatching actions, i.e locally and with the help of redux stores.
 - Used CSS and Bootstrap for styling.
 - The Api used has no support for taking search terms, so used client side search with debounce.
+
+
+**ScreenShots attched with different scenarios**
